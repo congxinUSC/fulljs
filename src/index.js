@@ -1,28 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+//React.PropTypes has moved into a different package since React v15.5
 
-const App = (props) => {
-  return (
-    <div>
-      <h2 className="text-center">
-        {props.headerMessage}
-      </h2>
-      <div>
-        ...
-      </div>
-    </div>
-  );
-};
+import App from './components/App';
 
-App.propTypes = {
-  headerMessage: React.PropTypes.string.isRequired
-};
-
-App.defultProps = {
-  headerMessage: 'Hello!'
-};
 
 ReactDOM.render(
-  <App headerMessage="Hello props!" />,
+  <App />,
   document.getElementById('root')
 );
